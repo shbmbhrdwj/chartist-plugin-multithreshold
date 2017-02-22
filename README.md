@@ -72,8 +72,6 @@ with the necessary parent series class.
 }
 ```
 
-Note: The default areas can be removed by applying a fill color of white.
-
 ## Default options
 
 These are the default options of the threshold plugin. All options can be customized within the plugin factory function.
