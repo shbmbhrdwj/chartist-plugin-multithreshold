@@ -37,25 +37,26 @@ Use the following CSS to style the chart parts
     stroke-width: 2px;
 }
 
-.ct-line.ct-threshold-1, .ct-point.ct-threshold-1, .ct-bar.ct-threshold-1 {
-    stroke: #f05b4f;
-}
-
 .ct-line.ct-threshold-0, .ct-point.ct-threshold-0, .ct-bar.ct-threshold-0 {
     stroke: #59922b;
+}
+
+.ct-line.ct-threshold-1, .ct-point.ct-threshold-1, .ct-bar.ct-threshold-1 {
+    stroke: #f05b4f;
 }
 
 .ct-line.ct-threshold-2, .ct-point.ct-threshold-2, .ct-bar.ct-threshold-2 {
     stroke: #bbbbbb;
 }
 
+.ct-line.ct-threshold-3, .ct-point.ct-threshold-3, .ct-bar.ct-threshold-3 {
+    stroke: #b55b5b;
+}
+
 .ct-line.ct-threshold-4, .ct-point.ct-threshold-4, .ct-bar.ct-threshold-4 {
     stroke: #000000;
 }
 
-.ct-line.ct-threshold-3, .ct-point.ct-threshold-3, .ct-bar.ct-threshold-3 {
-    stroke: #b55b5b;
-}
 ```
 
 You can, of course, also split multiple series with the threshold plugin. Just make sure you modify the CSS selectors 
@@ -66,7 +67,7 @@ with the necessary parent series class.
   stroke: #f05b4f;
 }
 
-.ct-series-a .ct-bar.ct-threshold-0 {
+.ct-series-a .ct-bar.ct-threshold-1 {
   stroke: #59922b;
 }
 ```
