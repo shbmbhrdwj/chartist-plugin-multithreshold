@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="./bower_components/chartist/dist/chartist.min.js"></script>
+    <script src="./src/scripts/chartist-plugin-multithreshold.js"></script>
+    <link href="./bower_components/chartist/dist/chartist.min.css" rel="stylesheet" type="text/css" />
+    <link href="./src/styles/chart-style.css" rel="stylesheet" type="text/css" />
+    <title>Chartist Plugin Demo</title>
+</head>
+<body>
+
+<div class="ct-chart" id="chart1"></div>
+
+<script>
+
+    new Chartist.Line('.ct-chart', {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        series: [
+            [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150]
+        ]
+    }, {
+        showArea: true,
+        axisY: {
+            onlyInteger: true
+        },
+        plugins: [
+            Chartist.plugins.ctMultiThreshold({
+                threshold: [20, 40, 60, 80],
+                minThreshold: 25,
+                maxThreshold: 55
+            })
+        ]
+    });
+
+</script>
+
+</body>
+</html>
