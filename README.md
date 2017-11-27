@@ -12,7 +12,7 @@ Threshold points can only be given as an array. The array values divide the resu
 from {0} to {Threshold array length}. Using these classes custom styling can be done.
 
 ```javascript
-new Chartist.Line('.ct-chart', {
+var chart = new Chartist.Line('.ct-chart', {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         series: [
             [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150]
@@ -80,4 +80,16 @@ These are the default options of the threshold plugin. All options can be custom
 var defaultOptions = {
   threshold: []
 };
+```
+
+## Chartist Update
+
+Now the plugin also supports the changing of threshold values when calling the Chartist.update method.
+
+```javascript
+chart.update(null, {
+    multiThresholdOptions: {
+        threshold: [20, 40, 60]
+    }
+}, true)
 ```

@@ -12,15 +12,17 @@
 
 <div class="ct-chart" id="chart1"></div>
 
+<button onclick="onClick()">Click Me to update chart</button>
+
 <script>
 
-    new Chartist.Line('.ct-chart', {
+    var chart = new Chartist.Line('.ct-chart', {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         series: [
-            [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150]
+            [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]
         ]
     }, {
-        showArea: true,
+        showArea: false,
         axisY: {
             onlyInteger: true
         },
@@ -30,6 +32,18 @@
             })
         ]
     });
+
+</script>
+
+<script>
+
+    function onClick() {
+        chart.update(null, {
+            multiThresholdOptions: {
+                threshold: [20, 40, 60]
+            }
+        }, true)
+    }
 
 </script>
 

@@ -134,6 +134,11 @@
 
                     // On the created event, create the mask definitions used to mask the line graphs
                     chart.on('created', function (data) {
+
+                        if(chart.options.multiThresholdOptions){
+                            options = Chartist.extend({}, options, chart.options.multiThresholdOptions);
+                        }
+
                         createMasks(data, options);
                     });
                 }
